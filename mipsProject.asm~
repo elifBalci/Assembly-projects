@@ -1,4 +1,3 @@
-#This program takes a string input from user and returns length of string and string itself as digits are replaced with asterisk character '*' 
 
 	.data
 input:	.space 80
