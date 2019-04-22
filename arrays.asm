@@ -36,10 +36,16 @@ fill_array: # fill array content with zeros
 	b fill_array               # repeat the loop
 	
 fill_array_done: 
+
+	la $t5, list + 8
+	li $t4, 66
+	sw $t4, ($t5)	 #set 3rd element of list to 66 just for fun 
+
 		             # syscall #1 prints and integer to stdout
 	lw $a0, ($a1)  	     # takes value via register $a0
 	li $v0, 1      	     # takes 
 	syscall 	     # via register $v0
+
 	
 	la $a0, new_line      # takes address of string via $a0
 	li $v0, 4       # takes 
