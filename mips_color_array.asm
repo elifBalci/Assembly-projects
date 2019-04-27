@@ -53,9 +53,6 @@ read_bmp:
 	li $a2, BMP_FILE_SIZE
 	li $v0, 14		#read from file
 	syscall
-	
-
-	
 
 #close file
 	li $v0, 16
@@ -69,13 +66,6 @@ read_bmp:
 	jr $ra
 
 get_color:
-#description: 
-#	returns color of specified pixel
-#arguments:
-#	$a0 - x coordinate
-#return value:
-#	$v0 - 0RGB - pixel color
-
 	sub $sp, $sp, 4		#push $ra to the stack
 	sw $ra,4($sp)
 
@@ -143,7 +133,6 @@ print_done:
 	jr $ra
 	
 #____________________________________________________________________________________#
-
 
 
 
