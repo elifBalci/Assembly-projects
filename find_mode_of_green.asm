@@ -161,7 +161,7 @@ find_mode:# tis function finds the most occuring number from the array
 #t4 for identify which one it is
 
 	beq $t2, 255, find_mode_done  # check for array end
-	lw $a0, ($t0)       # print list element
+	lw $a0, ($t0) 
 	
 	bge $a0, $t3, greater
 	
@@ -170,7 +170,7 @@ find_mode:# tis function finds the most occuring number from the array
 	b find_mode               # repeat the loop
 greater:
 	li $t4, 0		#|
-	add $t4, $t2, $t2	#| t4 = t2 
+	add $t4, $t4, $t2	#| t4 = t2 
 	
 	li $t3,0		#|
 	add $t3, $a0, $t3 	#| t3 = a0
@@ -190,5 +190,6 @@ find_mode_done:
 	syscall 	
 	jr $ra
 #____________________________________________________________________________________#
+
 
 
